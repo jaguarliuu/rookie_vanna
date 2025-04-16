@@ -1,0 +1,158 @@
+identity:
+  name: rookie_vanna
+  author: jaguarliuu
+  label:
+    en_US: rookie_vanna
+    zh_Hans: rookie_vanna
+    pt_BR: rookie_vanna
+description:
+  human:
+    en_US: vanna llm nl2sql plugin
+    zh_Hans: vanna llm nl2sql plugin
+    pt_BR: vanna llm nl2sql plugin
+  llm: vanna llm nl2sql plugin
+parameters:
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Query string
+      zh_Hans: 查询语句
+      pt_BR: Query string
+    human_description:
+      en_US: vanna llm nl2sql plugin
+      zh_Hans: vanna llm nl2sql plugin
+      pt_BR: vanna llm nl2sql plugin
+    llm_description: vanna llm nl2sql plugin
+    form: llm
+  - name: api_key
+    type: secret-input
+    required: true
+    form: llm
+    label:
+      en_US: OpenAI API key
+      zh_Hans: OpenAI API key
+      pt_BR: OpenAI API key
+    human_description:
+      en_US: OpenAI API key
+      zh_Hans: OpenAI API key
+      pt_BR: OpenAI API key
+    llm_description: OpenAI API key
+  - name: base_url
+    type: string
+    required: true
+    form: llm
+    label:
+      en_US: Base url
+      zh_Hans: OpenAI Base url
+      pt_BR: Base url
+    human_description:
+      en_US: Base url
+      zh_Hans: OpenAI Base url
+      pt_BR: Base url
+    llm_description: Base url
+  - name: model
+    type: string
+    required: true
+    form: llm
+    label:
+      en_US: Model name
+      zh_Hans: 模型名称
+      pt_BR: Model name
+    human_description:
+      en_US: Model name
+      zh_Hans: 模型名称
+      pt_BR: Model name
+    llm_description: Model name
+  - name: host
+    type: string
+    required: true
+    form: llm
+    label:
+      en_US: Database ip/host
+      zh_Hans: 数据库IP/域名
+      pt_BR: Database ip/host
+    human_description:
+      en_US: Database ip/host
+      zh_Hans: 数据库IP/域名
+      pt_BR: Database ip/host
+    llm_description: Database ip/host
+  - name: port
+    type: number
+    required: true
+    form: llm
+    min: 1
+    max: 65535
+    label:
+      en_US: Database port
+      zh_Hans: 数据库端口
+      pt_BR: Database port
+    human_description:
+      en_US: Database port
+      zh_Hans: 数据库端口
+      pt_BR: Database port
+    llm_description: Database port
+  - name: db_name
+    type: string
+    required: true
+    form: llm
+    label:
+      en_US: Database name
+      zh_Hans: 数据库名称
+      pt_BR: Database name
+    human_description:
+      en_US: Database name
+      zh_Hans: 数据库名称
+      pt_BR: Database name
+    llm_description: Database name
+  - name: username
+    type: string
+    required: true
+    form: llm
+    label:
+      en_US: Username
+      zh_Hans: 用户名
+      pt_BR: Username
+    human_description:
+      en_US: Username
+      zh_Hans: 用户名
+      pt_BR: Username
+    llm_description: Username
+  - name: password
+    type: secret-input
+    required: true
+    form: llm
+    label:
+      en_US: Password
+      zh_Hans: 密码
+      pt_BR: Password
+    human_description:
+      en_US: Password
+      zh_Hans: 密码
+      pt_BR: Password
+    llm_description: Password
+  # - name: result_type
+  #   type: select
+  #   required: true
+  #   form: form
+  #   label:
+  #     en_US: Result type
+  #     zh_Hans: 结果类型
+  #     pt_BR: Result type
+  #   human_description:
+  #     en_US: Result type
+  #     zh_Hans: 结果类型
+  #     pt_BR: Result type
+  #   llm_description: Result type
+  #   options:
+  #     - label:
+  #         en_US: SQL
+  #         zh_Hans: SQL
+  #       value: sql
+  #     - label:
+  #         en_US: data_frame
+  #         zh_Hans: 数据图表
+  #       value: data_frame
+extra:
+  python:
+    source: tools/rookie_vanna.py

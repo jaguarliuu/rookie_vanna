@@ -1,0 +1,18 @@
+identity:
+  author: jaguarliuu
+  name: rookie_vanna
+  label:
+    en_US: rookie_vanna
+    zh_Hans: rookie_vanna
+    pt_BR: rookie_vanna
+  description:
+    en_US: vanna llm nl2sql plugin
+    zh_Hans: 基于Vanna实现的nl2sql插件
+    pt_BR: vanna llm nl2sql plugin
+  icon: sql.svg
+tools:
+  - tools/rookie_vanna.yaml
+  - tools/vanna_train.yaml
+extra:
+  python:
+    source: provider/rookie_vanna.py

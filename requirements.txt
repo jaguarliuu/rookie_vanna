@@ -1,0 +1,9 @@
+dify_plugin~=0.0.1b72
+
+# vanna
+chromadb==0.6.3
+openai==1.74.0
+vanna==0.7.9
+
+# 数据库驱动
+pymysql>=1.1.1 
